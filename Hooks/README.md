@@ -1,12 +1,65 @@
-# React + Vite
+# Hooks :
+- hooks are predefined or inbuilt method/function in react js, which will perform some specific task.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Hooks :
+# 1. useState():
+- The useState hook is used to declare state variables in a functional component.
 
-Currently, two official plugins are available:
+### example: 
+```
+import React, { useState } from 'react';// to import hooks
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+function App() {
 
-## Expanding the ESLint configuration
+  const [counter, setCounter] = useState(0)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  const addValue = () => {
+    if(counter < 20){ // increament should be below 20
+      setCounter(counter + 1)
+    }
+  }
+
+  const removeValue = () => {
+    if(counter > 0){ // decreament should be above 0
+      setCounter(counter - 1)
+    }
+  }
+
+  return (
+    <>
+      <h1>useState()</h1>
+      <h2>Counter value: {counter}</h2>
+
+      <button onClick={addValue}>Add value {counter}</button>
+      <br />
+      <button onClick={removeValue}>remove value {counter}</button>
+      {/* <p>footer: {counter}</p> */}
+    </>
+  )
+}
+```
+
+# 2.useEffect() :
+- The useEffect hook allows you to perform side effects in functional components.
+- its basically to add/perform some additional task.
+
+```
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component rendered or updated!');
+  }, [count]); // The effect runs when `count` changes
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase Count</button>
+    </div>
+  );
+}
+```
+- in the above code ,it is same as useState() but when we click on increament/decreament button in the console window it shows the cound also by using 'useEffet()'.
+- in case of 'useState()' it doest not show . 
