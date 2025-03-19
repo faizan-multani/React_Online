@@ -33,7 +33,6 @@ function App() {
       <button onClick={addValue}>Add value {counter}</button>
       <br />
       <button onClick={removeValue}>remove value {counter}</button>
-      {/* <p>footer: {counter}</p> */}
     </>
   )
 }
@@ -51,7 +50,7 @@ function Example() {
 
   useEffect(() => {
     console.log('Component rendered or updated!');
-  }, [count]); // The effect runs when `count` changes
+  }, [count]); // The effect runs when `count` changes/dependency array
 
   return (
     <div>
