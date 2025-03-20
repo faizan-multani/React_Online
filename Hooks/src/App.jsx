@@ -9,13 +9,15 @@ function App() {
   //let counter = 15
 
   const addValue = () => {
-    if(counter < 20){ // increament should be below 20
+    if (counter < 20) {
+      // increament should be below 20
       setCounter(counter + 1)
     }
   }
 
   const removeValue = () => {
-    if(counter > 0){ // decreament should be above 0
+    if (counter > 0) {
+      // decreament should be above 0
       setCounter(counter - 1)
     }
   }
