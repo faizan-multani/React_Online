@@ -15,7 +15,7 @@
 -By using the Virtual DOM, React can efficiently manage UI changes and improve performance by reducing the direct DOM manipulation overhead.
 
 # qu2.1 difference between read dom and virtual dom?
-![alt text](relative/path/to/your/image.png)
+![Logo](React_online/Screenshot_2.png)
 
 2.1 Difference Between Real DOM and Virtual DOM?
 Real DOM	Virtual DOM
