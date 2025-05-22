@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
+import ThemeBtn from "../Theme/ThemeBtn"
 
 export default function Header() {
   return (
@@ -80,6 +81,7 @@ export default function Header() {
                   Github
                 </NavLink>
               </li>
+              <ThemeBtn />
             </ul>
           </div>
         </div>
